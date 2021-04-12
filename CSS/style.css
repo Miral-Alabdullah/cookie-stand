@@ -6,3 +6,14 @@
 h1{
     padding-left: 6%;
 }
+body main ul{
+    font-size: 50px;
+    border: 2px solid #c64756;
+    display: inline-block;
+    padding-inline: 10%;
+    margin-left: 25%;
+}
+body {
+    background-color: #fad586;
+}
+
