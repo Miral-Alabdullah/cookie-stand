@@ -1,4 +1,4 @@
-'User strict';
+'use strict';
 
 
 let total;
@@ -9,7 +9,7 @@ main.appendChild(table);
 let firstRow = document.createElement('tr');
 table.appendChild(firstRow);
 let arrayOfTotal = [];
-let totalPerHour = [];
+let cookieNum = [];
 let time = ['6:00AM','7:00AM','8:00AM','9:00AM','10:00AM','11:00AM','12:00PM',
   '1:00PM','2:00PM','3:00PM','4:00PM','5:00PM','6:00PM','7:00PM'];
 function numCust(min, max) {
@@ -66,10 +66,9 @@ for (let i = 0; i<arraOfObjects.length; i++) {
 } // to call the function for each object
 
 
+// Shop.prototype.render
 
-
-
-Shop.prototype.renderHeader = function(){
+function header(){
   let headerRow = null;
   headerRow = document.createElement('th');
   firstRow.appendChild(headerRow);
@@ -82,46 +81,48 @@ Shop.prototype.renderHeader = function(){
   headerRow = document.createElement('th');
   firstRow.appendChild(headerRow);
   headerRow.textContent = 'Daily Location Total';
-};
+}
+
+header();
 
 
 
 Shop.prototype.renderData = function() {
   let dataRow = null;
+  let secondRow = document.createElement('tr');
+  table.appendChild(secondRow);
+  dataRow = document.createElement('td');
+  secondRow.appendChild(dataRow);
   for (let i=0; i<arraOfObjects.length; i++){
-    let secondRow = document.createElement('tr');
-    table.appendChild(secondRow);
+    dataRow.textContent = this.location;
+  }
+  for (let j=0; j<time.length; j++){
     dataRow = document.createElement('td');
     secondRow.appendChild(dataRow);
-    dataRow.textContent = arraOfObjects[i].location;
-    for (let j=0; j<=time.length; j++){
-      table.appendChild(secondRow);
-      dataRow = document.createElement('td');
-      secondRow.appendChild(dataRow);
-      dataRow.textContent = arraOfObjects[i].cookieNum[j];
-      if (j === time.length){
-        dataRow.textContent = arraOfObjects[i].totalCookie;
-      }
-    }
+    dataRow.textContent = this.cookieNum[j];
   }
+  dataRow = document.createElement('td');
+  secondRow.appendChild(dataRow);
+  dataRow.textContent = this.totalCookie;
 };
 
 
 
-// let globalArray = [];
-// for (let j=0; j<time.length; j++){
-//   for (let i=0; i<arraOfObjects.length; i++){
-//     globalArray.push(arraOfObjects[i].cookieNum[j]);
-//   }
-// }
-// console.log(globalArray);
+
+seattle.renderData();
+tokyo.renderData();
+paris.renderData();
+dubai.renderData();
+lima.renderData();
+
+
 
 result = 0;
 let thirdRow = document.createElement('tr');
 table.appendChild(thirdRow);
 let dataRow02 = document.createElement('th');
 thirdRow.appendChild(dataRow02);
-Shop.prototype.renderFooter = function() {
+function footer() {
   dataRow02.textContent = 'Totals';
   for (let j=0; j<=time.length; j++){
     dataRow02 = document.createElement('th');
@@ -133,11 +134,8 @@ Shop.prototype.renderFooter = function() {
     dataRow02.textContent = sum;
   }
   dataRow02.textContent = result;
-};
+}
 
-Shop.prototype.renderHeader();
-Shop.prototype.renderData();
-Shop.prototype.renderFooter();
 
 
 for (let j=0; j<time.length; j++){
@@ -153,11 +151,22 @@ dataRow02.textContent = result;
 
 
 
+footer();
 
 
 
 
 
+
+
+
+// let globalArray = [];
+// for (let j=0; j<time.length; j++){
+//   for (let i=0; i<arraOfObjects.length; i++){
+//     globalArray.push(arraOfObjects[i].cookieNum[j]);
+//   }
+// }
+// console.log(globalArray);
 
 
 // dataRow02.textContent = val;
@@ -409,4 +418,5 @@ dataRow02.textContent = result;
 // Lima.randomCustomer();
 // Lima.cookieSale();
 // Lima.unorderDisplay();
-// console.log(Lima.cookieNum);
+// console.log(Lima.cookieNum)
+
