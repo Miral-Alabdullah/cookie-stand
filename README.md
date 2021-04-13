@@ -8,4 +8,12 @@
 
 >> During the operation hours, we went to know the number of sales for each shop in each location provided by the owner per hour.
 
->> Then, we have to see the total number of sales per day individually. 
+>> Then, we have to see the total number of sales per day individually.
+
+
+**Updated news for the prtoject :**
+
+>> It shows a table that contains the operation hours for each shop, its location and 
+>> * The number of sales per hour
+>> * The total of sales each hour over the five locations
+>> * The total number of sales every day 
