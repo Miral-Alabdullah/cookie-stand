@@ -1,19 +1,28 @@
 .image {
     width: 20%;
     transform: skewY(-20deg);
-    padding-top: 1%;
+    padding-top: 1%
 }
 h1{
-    padding-left: 6%;
-}
-body main ul{
-    font-size: 50px;
-    border: 2px solid #c64756;
-    display: inline-block;
-    padding-inline: 10%;
-    margin-left: 25%;
-}
-body {
-    background-color: #fad586;
+    padding-left: 20%;
+    border: 1px solid #2b4f60;
 }
 
+body {
+    background-color: #845460;
+}
+table {
+    padding-left: 15%;
+    padding-top: 10%;
+}
+
+table th {
+    padding-left: 1%;
+    border: 1px solid #2b4f60;
+}
+
+table tr td {
+    text-align: center;
+    padding-top: 2%;
+    border: 1px solid #2b4f60;
+}
