@@ -1,3 +1,5 @@
+
+
 *{
     box-sizing: border-box;
 }
@@ -81,4 +83,45 @@ section {
     border: 2px solid #6e7c7c;
     padding: 2px;
     box-shadow: 3px 3px #6e7c7c;
+}
+
+#tableCheck{
+    position: absolute;
+    top: 175%;
+    left: 23%;
+    overflow: scroll;
+    height: 15%;
+    width: 50%;
+    box-shadow: 3px 3px #6e7c7c;
+}
+
+table {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#tHeading {
+    padding: 3%;
+    width: 10%;
+    font-size: 19px;
+    background-color: #6e7c7c;
+    color: #222831;
+    text-shadow: 2px 2px #c8c6a7;
+}
+
+#tRow {
+    text-align: center;
+    font-size: 17px;
+    background-color: #6e7c7cab;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #222831;
+}
+
+footer {
+    background-color: #435560;
+    position: absolute;
+    top: 200%;
+    width: -webkit-fill-available;
+    color: #c8c6a7;
+    font-size: 17px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

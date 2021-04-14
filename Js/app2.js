@@ -1,4 +1,5 @@
 
+
 'use strict';
 
 let locations = ['Seattle','Tokyo','Paris','Dubai','Lima'];
@@ -56,6 +57,7 @@ let headingRow = null;
 table1.appendChild(rowHeading);
 for (let i = 0; i<headings.length; i++){
   headingRow = document.createElement('th');
+  headingRow.setAttribute('id', 'tHeading');
   rowHeading.appendChild(headingRow);
   headingRow.textContent = headings[i];
 }
@@ -63,15 +65,15 @@ let rowLocations = null;
 let rowData = null;
 for (let i = 0; i<locations.length; i++){
   rowLocations = document.createElement('tr');
+  rowLocations.setAttribute('id', 'tRow');
   table1.appendChild(rowLocations);
   rowLocations.textContent = locations[i];
   rowData = document.createElement('td');
+  rowData.setAttribute('id','dataRow');
   rowLocations.appendChild(rowData);
   rowData.textContent = address[i];
   rowData = document.createElement('td');
   rowLocations.appendChild(rowData);
   rowData.textContent = openingHours[i];
 }
-
-
 
