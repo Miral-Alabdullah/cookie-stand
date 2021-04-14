@@ -62,3 +62,23 @@ section {
     padding: 2px;
     box-shadow: 3px 3px #6e7c7c;
 }
+
+#section2 {
+    position: absolute;
+    top: 90%;
+    left: 21.5%;
+}
+#section3 {
+    position: absolute;
+    top: 90%;
+    left: 51.5%;
+}
+
+.card{
+    width: 350px;
+    height: 300px;
+    margin: 1%;
+    border: 2px solid #6e7c7c;
+    padding: 2px;
+    box-shadow: 3px 3px #6e7c7c;
+}
