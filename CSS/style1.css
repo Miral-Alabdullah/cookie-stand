@@ -1,3 +1,4 @@
+
 *{
     box-sizing: border-box;
 }
@@ -49,20 +50,31 @@ body {
     margin:0%;
 }
 table {
-    width: 15%;
-    height: 35%;
-    padding-left: 20%;
+    padding-left: 4%;
     padding-top: 10%;
 }
 
 table th {
-    border: 1px solid #2b4f60;
+    background-color:  #6e7c7c;
     text-align: center;
+    color: #222831;
+    font-size: 25px;
 }
 
 table tr td {
     text-align: center;
     padding-top: 2%;
-    border: 1px solid #2b4f60;
+    border: 1px solid #6e7c7c;
+    font-size: 18px;
 }
 
+footer {
+    text-align: center;
+    background-color: #435560;
+    position: absolute;
+    top: 200%;
+    width: -webkit-fill-available;
+    color: #c8c6a7;
+    font-size: 17px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
