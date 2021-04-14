@@ -8,13 +8,12 @@ let table = document.createElement('table');
 main.appendChild(table);
 let firstRow = document.createElement('tr');
 table.appendChild(firstRow);
-let arrayOfTotal = [];
 // let cookieNum = [];
 let time = ['6:00AM','7:00AM','8:00AM','9:00AM','10:00AM','11:00AM','12:00PM',
   '1:00PM','2:00PM','3:00PM','4:00PM','5:00PM','6:00PM','7:00PM'];
 function numCust(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
-}
+} // I used this function from MDN web docs
 
 
 //creating the constructor function
@@ -32,16 +31,17 @@ function Shop(location,minCust,maxCust,avgCust) {
 }
 
 
-//creating the objects
+//creating the objects - instances
 let seattle = new Shop('Seattle',23,65,6.3);
 let tokyo = new Shop('Tokyo',3,24,1.2);
 let dubai = new Shop('Dubai',11,38,3.7);
 let paris = new Shop('Paris',20,38,2.3);
 let lima = new Shop('Lima',2,16,4.6);
+// let location1 = new Shop('Italy', 5, 2, 9);
 
 
 // creating the function-methods using prototypes
-//1- This randomCustomer function is to show a random numbers of customers per hour
+//1- This randomCustomer function is to show a random numbers of customers per hour depending on the min and max values
 Shop.prototype.randomCustomer = function() {
   for(let i=0; i<time.length; i++){
     this.randomCust.push(numCust(this.minCust,this.maxCust));
@@ -53,12 +53,10 @@ Shop.prototype.cookieSale = function() {
   total = 0;
   for (let i=0; i<time.length; i++){
     this.cookieNum.push(Math.ceil(this.randomCust[i] * this.avgCust));
-    total = total + this.cookieNum[i];
+    total += this.cookieNum[i];
   }
   this.totalCookie += total;
 };
-
-// console.log(total);
 
 for (let i = 0; i<arraOfObjects.length; i++) {
   arraOfObjects[i].randomCustomer();
@@ -66,13 +64,12 @@ for (let i = 0; i<arraOfObjects.length; i++) {
 } // to call the function for each object
 
 
-// Shop.prototype.render
 
 function header(){
   let headerRow = null;
   headerRow = document.createElement('th');
   firstRow.appendChild(headerRow);
-  headerRow.textContent = '';
+  headerRow.textContent;
   for (let i=0; i<time.length; i++){
     headerRow = document.createElement('th');
     firstRow.appendChild(headerRow);
@@ -82,25 +79,29 @@ function header(){
   firstRow.appendChild(headerRow);
   headerRow.textContent = 'Daily Location Total';
 }
-
 header();
 
 
 
 Shop.prototype.renderData = function() {
+  let headRow = null;
   let dataRow = null;
   let secondRow = document.createElement('tr');
   table.appendChild(secondRow);
+  headRow = document.createElement('th');
   dataRow = document.createElement('td');
-  secondRow.appendChild(dataRow);
-  for (let i=0; i<arraOfObjects.length; i++){
-    dataRow.textContent = this.location;
-  }
-  for (let j=0; j<time.length; j++){
+  secondRow.appendChild(headRow);
+  for (let i=0; i<this.cookieNum.length; i++){
+    headRow.textContent = this.location;
     dataRow = document.createElement('td');
     secondRow.appendChild(dataRow);
-    dataRow.textContent = this.cookieNum[j];
-  }
+    dataRow.textContent = this.cookieNum[i];
+  } // I replaced my previous code with this that the instructor mentioned because it makes sense more than mine
+  // for (let j=0; j<time.length; j++){
+  //   dataRow = document.createElement('td');
+  //   secondRow.appendChild(dataRow);
+  //   dataRow.textContent = this.cookieNum[j];
+  // }
   dataRow = document.createElement('td');
   secondRow.appendChild(dataRow);
   dataRow.textContent = this.totalCookie;
@@ -108,58 +109,78 @@ Shop.prototype.renderData = function() {
 
 
 
-
-seattle.renderData();
-tokyo.renderData();
-paris.renderData();
-dubai.renderData();
-lima.renderData();
+for (let i=0; i<arraOfObjects.length; i++){
+  arraOfObjects[i].renderData();
+} //calling the renderData function for each instance
 
 
+// seattle.renderData();
+// tokyo.renderData();
+// paris.renderData();
+// dubai.renderData();
+// lima.renderData();
 
-result = 0;
+
+
+
+
+
+let megaTotal = 0;
+let sum;
 let thirdRow = document.createElement('tr');
 table.appendChild(thirdRow);
-let dataRow02 = document.createElement('th');
-thirdRow.appendChild(dataRow02);
+let dataRow02 = null;
 function footer() {
-  dataRow02.textContent = 'Totals';
-  for (let j=0; j<=time.length; j++){
-    dataRow02 = document.createElement('th');
-    thirdRow.appendChild(dataRow02);
-    let sum = 0;
+  dataRow02 = document.createElement('th');
+  thirdRow.appendChild(dataRow02);
+  dataRow02.textContent = 'Totals'; // first cell
+  for (let j=0; j<time.length; j++){
+    sum = 0;
     for (let i=0; i<arraOfObjects.length; i++){
       sum += arraOfObjects[i].cookieNum[j];
     }
-    dataRow02.textContent = sum;
-  }
-  dataRow02.textContent = result;
-}
-
-
-
-for (let j=0; j<time.length; j++){
-  for (let i=0; i<arraOfObjects.length; i++){
-    arrayOfTotal.push(arraOfObjects[i].cookieNum[j]);
+    dataRow02 = document.createElement('th');
     thirdRow.appendChild(dataRow02);
-    result += arrayOfTotal[i];
+    dataRow02.textContent = sum;
+    megaTotal += sum;
   }
-}
-table.appendChild(thirdRow);
-thirdRow.appendChild(dataRow02);
-dataRow02.textContent = result;
+  let finalTotals = document.createElement('th');
+  thirdRow.appendChild(finalTotals);
+  finalTotals.textContent = megaTotal;
 
-
+  // dataRow02.textContent += sum;
+} 
 
 footer();
 
+// We are gitting the id of the form
 
 
 
 
 
 
+// ------------------------------------------------------------------------------------------------------------------------------
+// for (let j=0; j<time.length; j++){
+//   for (let i=0; i<arraOfObjects.length; i++){
+//     arrayOfTotal.push(arraOfObjects[i].cookieNum[j]);
+//     thirdRow.appendChild(dataRow02);
+//     result += arrayOfTotal[i];
+//   }
+// }
 
+
+
+// table.appendChild(thirdRow);
+// thirdRow.appendChild(dataRow02);
+// dataRow02.textContent = result;
+
+
+// for (let i=0; i<arraOfObjects.length; i++){
+//   if (arraOfObjects.length>5){
+//     thirdRow.remove();
+//   }
+// }
 
 
 // let globalArray = [];
