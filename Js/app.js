@@ -153,7 +153,45 @@ function footer() {
 
 footer();
 
+
+
 // We are gitting the id of the form
+const form = document.getElementById('newLocation');
+form.addEventListener('submit', handleSubmitting);
+
+function handleSubmitting(event){
+  event.preventDefault();
+  let location = event.target.locationField.value;
+  let minCust = parseInt(event.target.minField.value);
+  let maxCust = parseInt(event.target.maxField.value);
+  let avgCust = parseFloat(event.target.avgField.value);
+  let newLocation = new Shop(location, minCust, maxCust, avgCust);
+  newLocation.randomCustomer();
+  newLocation.cookieSale();
+  newLocation.renderData();
+  if (location.length !== 0 && minCust.length !== 0 && maxCust.length !== 0 && avgCust.length !== 0){
+    thirdRow.remove();
+    let fourthRow = document.createElement('tr');
+    table.appendChild(fourthRow);
+    let totalData = document.createElement('th');
+    fourthRow.appendChild(totalData);
+    totalData.textContent = 'Totals';
+    for (let j=0; j<time.length; j++){
+      sum = 0;
+      for (let i=0; i<arraOfObjects.length; i++){
+        sum += arraOfObjects[i].cookieNum[j];
+        // console.log(sum);
+      }
+      totalData = document.createElement('th');
+      fourthRow.appendChild(totalData);
+      totalData.textContent = sum;
+      megaTotal += sum;
+    }
+    let finalTotals = document.createElement('th');
+    fourthRow.appendChild(finalTotals);
+    finalTotals.textContent = megaTotal;
+  }
+}
 
 
 
