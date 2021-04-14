@@ -2,7 +2,6 @@
 
 
 let total;
-let result;
 let main = document.getElementById('cookie');
 let table = document.createElement('table');
 main.appendChild(table);
@@ -149,7 +148,7 @@ function footer() {
   finalTotals.textContent = megaTotal;
 
   // dataRow02.textContent += sum;
-} 
+}
 
 footer();
 

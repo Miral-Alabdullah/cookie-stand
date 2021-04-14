@@ -1,29 +1,32 @@
-
-
 *{
     box-sizing: border-box;
 }
 header {
-    padding: 20px;
+    padding: 2%;
     background-color: #435560;
     position: relative;
 }
 .image {
-    width: 10%;
-    transform: skewY(-22deg);
-    padding-top: 2%;
+    width: 15%;
+    /* transform: skewY(-22deg); */
+    padding-top: 1%;
     padding-left: 2%;
     position: absolute;
-    left: 14.5%;
-    bottom: 47%;
+    left: 21%;
+    bottom: 54%;
+    opacity: 0.8;
 }
 h1{
     position: absolute;
-    top: 18%;
+    top: 38%;
     right: 62%;
     color: #c8c6a7;
     text-shadow: 2px 2px #6e7c7c;
     font-family: Arial, Helvetica, sans-serif;
+    border-top: 1px solid #c8c6a7;
+}
+#color{
+    color: #a04927;
 }
 header nav ul {
     height: 35%;
@@ -46,59 +49,60 @@ header nav ul li a {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
+a:hover{
+    background-color: #c8c6a7;
+    color: #435560;
+}
 body {
     background-color: #c8c6a7;
     margin:0%;
 }
-
 section {
     position: relative;
 }
-
 #sec1{
     position: absolute;
     left: 20%;
     top: 50%;
     margin: 2%;
     border: 2px solid #6e7c7c;
-    padding: 2px;
+    padding: 1%;
     box-shadow: 3px 3px #6e7c7c;
 }
-
 #section2 {
     position: absolute;
     top: 95%;
     left: 22.1%;
 }
-#section3 {
+.section3 {
     position: absolute;
     top: 95%;
-    left: 51.5%;
+    left: 53.5%;
 }
-
 .card{
+    position: relative;
     width: 350px;
     height: 300px;
     margin: 1%;
     border: 2px solid #6e7c7c;
-    padding: 2px;
+    padding: 1%;
     box-shadow: 3px 3px #6e7c7c;
 }
-
+img:hover {
+    opacity: 0.3;
+  }
 #tableCheck{
     position: absolute;
-    top: 185%;
+    top: 174%;
     left: 23%;
     overflow: scroll;
-    height: 15%;
+    height: 25%;
     width: 50%;
     box-shadow: 3px 3px #6e7c7c;
 }
-
 table {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-
 #tHeading {
     padding: 3%;
     width: 10%;
@@ -124,4 +128,22 @@ footer {
     color: #c8c6a7;
     font-size: 17px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+footer ul li {
+    text-align: center;
+    text-decoration: none;
+    list-style: none;
+    top: 30%;
+    left: 10%;
+    color: #c8c6a7;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+footer ul li img {
+    width: 2.7%;
+}
+.check{
+    width: 3%
 }

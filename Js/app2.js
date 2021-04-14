@@ -35,7 +35,7 @@ fourthCard.setAttribute('src', 'img/frosted-cookie.jpg');
 
 
 let thirdSection = document.createElement('section');
-thirdSection.setAttribute('id', 'section3');
+thirdSection.setAttribute('class', 'section3');
 home.appendChild(thirdSection);
 let secondCard = document.createElement('img');
 secondCard.setAttribute('class', 'card');
