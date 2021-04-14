@@ -48,17 +48,21 @@ body {
     background-color: #c8c6a7;
     margin:0%;
 }
-
-section {
-    position: relative;
+table {
+    width: 15%;
+    height: 35%;
+    padding-left: 20%;
+    padding-top: 10%;
 }
 
-#sec1{
-    position: absolute;
-    left: 20%;
-    top: 50%;
-    margin: 2%;
-    border: 2px solid #6e7c7c;
-    padding: 2px;
-    box-shadow: 3px 3px #6e7c7c;
+table th {
+    border: 1px solid #2b4f60;
+    text-align: center;
 }
+
+table tr td {
+    text-align: center;
+    padding-top: 2%;
+    border: 1px solid #2b4f60;
+}
+
