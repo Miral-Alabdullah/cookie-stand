@@ -12,33 +12,42 @@ let openingHours = ['6:00AM','7:00AM','8:00AM','9:00AM','10:00AM','11:00AM','12:
 
 let home = document.getElementById('section');
 let firstSection = document.createElement('section');
+firstSection.setAttribute('id', 'section');
 home.appendChild(firstSection);
 let image = document.createElement('img');
+image.setAttribute('id', 'sec1');
 firstSection.appendChild(image);
 image.setAttribute('src', 'img/family.jpg');
 
 
 let secondSection = document.createElement('section');
+secondSection.setAttribute('id', 'section2');
 home.appendChild(secondSection);
 let firstCard = document.createElement('img');
+firstCard.setAttribute('class', 'card');
 secondSection.appendChild(firstCard);
 firstCard.setAttribute('src', 'img/cutter.jpeg');
 let fourthCard = document.createElement('img');
+fourthCard.setAttribute('class', 'card');
 secondSection.appendChild(fourthCard);
 fourthCard.setAttribute('src', 'img/frosted-cookie.jpg');
 
 
 let thirdSection = document.createElement('section');
+thirdSection.setAttribute('id', 'section3');
 home.appendChild(thirdSection);
 let secondCard = document.createElement('img');
+secondCard.setAttribute('class', 'card');
 thirdSection.appendChild(secondCard);
 secondCard.setAttribute('src', 'img/fish.jpg');
 let thirdCard = document.createElement('img');
+thirdCard.setAttribute('class', 'card');
 thirdSection.appendChild(thirdCard);
 thirdCard.setAttribute('src', 'img/shirt.jpg');
 
 
 let fourthSection = document.createElement('section');
+fourthSection.setAttribute('id','tableCheck');
 home.appendChild(fourthSection);
 let table1 = document.createElement('table');
 fourthSection.appendChild(table1);
