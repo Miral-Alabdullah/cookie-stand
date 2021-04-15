@@ -106,3 +106,11 @@ footer ul li img {
 img:hover {
     opacity: 0.3;
 }
+#newLocation{
+    background-color: #435560;
+    margin-top: 2%;
+    margin-left: 28%;
+    width: 40%;
+    padding: 4%;
+    border-radius: 10%;
+}
