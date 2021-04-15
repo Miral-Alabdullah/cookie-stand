@@ -82,7 +82,7 @@ section {
 .card{
     position: relative;
     width: 350px;
-    height: 300px;
+    height: 250px;
     margin: 1%;
     border: 2px solid #6e7c7c;
     padding: 1%;
@@ -93,11 +93,11 @@ img:hover {
   }
 #tableCheck{
     position: absolute;
-    top: 174%;
-    left: 23%;
+    top: 170%;
+    left: 26%;
     overflow: scroll;
     height: 25%;
-    width: 50%;
+    width: 45%;
     box-shadow: 3px 3px #6e7c7c;
 }
 table {
