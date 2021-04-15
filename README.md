@@ -17,3 +17,16 @@
 >> * The number of sales per hour
 >> * The total of sales each hour over the five locations
 >> * The total number of sales every day 
+
+
+>> A form has been added into the sales page, What does the form do?
+
+>>> 1- You to enter a name of any location that you want
+
+>>> 2- Enter a minmum number of customers
+
+>>> 3- Enter a maximum number of customers
+
+>>> 4- The averge of sales
+
+>>> 5- submit in order to see the changes on the table
