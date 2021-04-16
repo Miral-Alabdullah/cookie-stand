@@ -9,7 +9,6 @@ header {
 }
 .image {
     width: 15%;
-    /* transform: skewY(-22deg); */
     padding-top: 1%;
     padding-left: 2%;
     position: absolute;
@@ -23,8 +22,15 @@ h1{
     right: 62%;
     color: #c8c6a7;
     text-shadow: 2px 2px #6e7c7c;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Padauk', sans-serif;
     border-top: 1px solid #c8c6a7;
+}
+header p {
+    position: absolute;
+    top: 65%;
+    right: 62.8%;
+    color: #c8c6a7;
+    font-family: 'Jura', sans-serif;
 }
 #color{
     color: #a04927;
@@ -47,7 +53,7 @@ header nav ul li a {
     left: 10%;
     color: #c8c6a7;
     font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Padauk', sans-serif;
     font-weight: bold;
 }
 header a:hover{
@@ -121,7 +127,7 @@ section {
      box-shadow: 5px 5px 5px #111;  
 }
 table {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Padauk', sans-serif;
 }
 #tHeading {
     padding: 3%;
@@ -136,7 +142,7 @@ table {
     text-align: center;
     font-size: 17px;
     background-color: #6e7c7cab;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Padauk', sans-serif;
     color: #222831;
 }
 
@@ -147,7 +153,7 @@ footer {
     width: -webkit-fill-available;
     color: #c8c6a7;
     font-size: 17px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Jura', sans-serif;
 }
 
 footer ul li {
@@ -158,7 +164,7 @@ footer ul li {
     left: 10%;
     color: #c8c6a7;
     font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Jura', sans-serif;
     font-weight: bold;
 }
 footer ul li img {
@@ -166,4 +172,4 @@ footer ul li img {
 }
 .check{
     width: 3%
-}
+} 
