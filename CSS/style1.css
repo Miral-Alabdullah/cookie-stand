@@ -63,8 +63,6 @@ body {
     margin-top: 7%;
 }
 table {
-    padding-left: 1%;
-    padding-top: 5%;
     padding-left: 2%;
     padding-top: 10%;
     -webkit-box-sizing: border-box;
@@ -73,6 +71,7 @@ table {
      box-sizing: border-box;
      -webkit-box-shadow: 5px 5px 5px #111;
      box-shadow: 5px 5px 5px #111; 
+    width: 25%;
 }
 table th {
     background-color:  #6e7c7c;

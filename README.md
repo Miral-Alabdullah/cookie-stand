@@ -30,3 +30,13 @@
 >>> 4- The averge of sales
 
 >>> 5- submit in order to see the changes on the table
+
+<br>
+<hr>
+<br>
+
+**Resources :**
+
+1- [Random function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random) 
+
+2- [Styling the form](https://www.w3schools.com/css/tryit.asp?filename=trycss_forms)
