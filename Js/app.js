@@ -153,7 +153,6 @@ function footer() {
 footer();
 
 
-
 // We are gitting the id of the form
 const form = document.getElementById('newLocation');
 form.addEventListener('submit', handleSubmitting);
@@ -167,30 +166,29 @@ function handleSubmitting(event){
   let newLocation = new Shop(location, minCust, maxCust, avgCust);
   newLocation.randomCustomer();
   newLocation.cookieSale();
+  thirdRow.remove();
   newLocation.renderData();
-  if (location.length !== 0 && minCust.length !== 0 && maxCust.length !== 0 && avgCust.length !== 0){
-    thirdRow.remove();
-    let fourthRow = document.createElement('tr');
-    table.appendChild(fourthRow);
-    let totalData = document.createElement('th');
-    fourthRow.appendChild(totalData);
-    totalData.textContent = 'Totals';
-    for (let j=0; j<time.length; j++){
-      sum = 0;
-      for (let i=0; i<arraOfObjects.length; i++){
-        sum += arraOfObjects[i].cookieNum[j];
-        // console.log(sum);
-      }
-      totalData = document.createElement('th');
-      fourthRow.appendChild(totalData);
-      totalData.textContent = sum;
-      megaTotal += sum;
+  thirdRow = document.createElement('tr');
+  table.appendChild(thirdRow);
+  dataRow02 = document.createElement('th');
+  thirdRow.appendChild(dataRow02);
+  dataRow02.textContent = 'Totals'; // first cell
+  for (let j=0; j<time.length; j++){
+    sum = 0;
+    for (let i=0; i<arraOfObjects.length; i++){
+      sum += arraOfObjects[i].cookieNum[j];
     }
-    let finalTotals = document.createElement('th');
-    fourthRow.appendChild(finalTotals);
-    finalTotals.textContent = megaTotal;
+    dataRow02 = document.createElement('th');
+    thirdRow.appendChild(dataRow02);
+    dataRow02.textContent = sum;
+    megaTotal += sum;
   }
+  let finalTotals = document.createElement('th');
+  thirdRow.appendChild(finalTotals);
+  finalTotals.textContent = megaTotal;
 }
+
+
 
 
 
@@ -479,4 +477,3 @@ function handleSubmitting(event){
 // Lima.cookieSale();
 // Lima.unorderDisplay();
 // console.log(Lima.cookieNum)
-

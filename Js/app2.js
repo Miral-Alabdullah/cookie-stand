@@ -27,6 +27,12 @@ home.appendChild(secondSection);
 let firstCard = document.createElement('img');
 firstCard.setAttribute('class', 'card');
 secondSection.appendChild(firstCard);
+let div = document.createElement('div');
+firstCard.appendChild(div);
+let text1 = document.createElement('p');
+div.setAttribute('class', 'text');
+text1.textContent = 'HELLO!';
+
 firstCard.setAttribute('src', 'img/cutter.jpeg');
 let fourthCard = document.createElement('img');
 fourthCard.setAttribute('class', 'card');
@@ -76,4 +82,3 @@ for (let i = 0; i<locations.length; i++){
   rowLocations.appendChild(rowData);
   rowData.textContent = openingHours[i];
 }
-

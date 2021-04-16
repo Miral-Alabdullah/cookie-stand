@@ -50,7 +50,7 @@ header nav ul li a {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
-a:hover{
+header a:hover{
     background-color: #c8c6a7;
     color: #435560;
 }
@@ -73,8 +73,9 @@ section {
     -ms-box-sizing: border-box;
      box-sizing: border-box;
      -webkit-box-shadow: 5px 5px 5px #111;
-     box-shadow: 5px 5px 5px #111; 
+     box-shadow: 5px 5px 5px #111;  
 }
+
 #section2 {
     position: absolute;
     top: 100%;
@@ -97,11 +98,14 @@ section {
     -ms-box-sizing: border-box;
      box-sizing: border-box;
      -webkit-box-shadow: 5px 5px 5px #111;
-     box-shadow: 5px 5px 5px #111; 
+     box-shadow: 5px 5px 5px #111;  
 }
-img:hover {
+.card:hover {
     opacity: 0.3;
-  }
+}
+#sec1:hover {
+    opacity: 0.3;
+}
 #tableCheck{
     position: absolute;
     top: 170%;
@@ -114,7 +118,7 @@ img:hover {
     -ms-box-sizing: border-box;
      box-sizing: border-box;
      -webkit-box-shadow: 5px 5px 5px #111;
-     box-shadow: 5px 5px 5px #111; 
+     box-shadow: 5px 5px 5px #111;  
 }
 table {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;

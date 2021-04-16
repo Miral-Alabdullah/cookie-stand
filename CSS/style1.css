@@ -118,9 +118,7 @@ footer ul li img {
 .check{
     width: 3%
 }
-img:hover {
-    opacity: 0.3;
-}
+
 #newLocation{
     background-color: #6e7c7c;
     margin-top: 2%;
