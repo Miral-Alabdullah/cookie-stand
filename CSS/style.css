@@ -64,11 +64,13 @@ header a:hover{
     color: #f7f7f5;
 }
 body {
-    background-image: url('/img/1751407.jpg');
+    background-image: url("https://img.wallpapersafari.com/tablet/2560/1700/27/77/BAPEJs.jpg");
     background-repeat:repeat-x;
     background-size: cover;
     /* background-color: #c8c6a7; */
     margin:0%;
+    background-color:#fff;
+    background-position: left top;
 }
 section {
     position: relative;
