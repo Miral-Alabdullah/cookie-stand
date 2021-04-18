@@ -8,26 +8,27 @@ header {
     position: relative;
 }
 .image {
-    width: 15%;
+    width: 14%;
     padding-top: 2%;
     padding-left: 2%;
     position: absolute;
-    left: 21.99%;
-    bottom: 47.5%;
+    left: 22.99%;
+    bottom: 43.5%;
     opacity: 0.8;
 }
 h1{
     position: absolute;
-    top: 38%;
+    top: 60%;
     right: 62%;
     color: #e0d0c2;
     text-shadow: 2px 2px #045f67d7;
     font-family: 'Padauk', sans-serif;
     border-top: 1px solid #c8c6a7;
+    font-size: xx-large;
 }
 header p {
     position: absolute;
-    top: 70%;
+    top: 90%;
     right: 62.8%;
     color: #764f32;
     font-family: 'Jura', sans-serif;
@@ -80,7 +81,7 @@ table {
     -webkit-box-shadow: 5px 5px 5px #111;
     box-shadow: 5px 5px 5px #111; 
     margin: 3%;
-    margin-left: 15%;
+    margin-left: 19.9%;
 }
 table th {
     background-color:  #764f32;
