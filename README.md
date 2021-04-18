@@ -40,3 +40,5 @@
 1- [Random function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random) 
 
 2- [Styling the form](https://www.w3schools.com/css/tryit.asp?filename=trycss_forms)
+
+3- [Validation function](https://www.w3schools.com/js/js_validation.asp)

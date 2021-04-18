@@ -164,6 +164,7 @@ function handleSubmitting(event){
   let maxCust = parseInt(event.target.maxField.value);
   let avgCust = parseFloat(event.target.avgField.value);
   let newLocation = new Shop(location, minCust, maxCust, avgCust);
+  validateForm();
   newLocation.randomCustomer();
   newLocation.cookieSale();
   thirdRow.remove();
@@ -187,6 +188,15 @@ function handleSubmitting(event){
   thirdRow.appendChild(finalTotals);
   finalTotals.textContent = megaTotal;
 }
+
+function validateForm() {
+  let x = document.forms['located']['min'].value;
+  if (x === '') {
+    alert('Fields must be filled out');
+    return false;
+  }
+}
+
 
 
 

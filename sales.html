@@ -31,23 +31,23 @@
             <form id="newLocation" name="located">
                 <fieldset>
                     <legend id="title">Add a new location</legend>
-                      <label for="locationField" class="label">Type a location </label>
+                      <label for="locationField" class="label" name="loca">Type a location </label>
                       <br>
-                      <input type="text" id="locationField" name="loca" class="input">
+                      <input type="text" id="locationField" name="min" class="input" required>
                       <br>
                       <label for="minField" class="label">Minimum number of customers </label>
                       <br>
-                      <input type="text" id="minField" name="min" class="input">
+                      <input type="number" id="minField" name="max" class="input" required>
                       <br>
                       <label for="maxField" class="label">Maximum number of customers </label>
                       <br>
-                      <input type="text" id="maxField" name="max" class="input">
+                      <input type="number" id="maxField" name="avg" class="input" required>
                       <br>
                       <label for="avgField" class="label">Average sales per day </label>
                       <br>
-                      <input type="text" id="avgField" name="avg" class="input">
+                      <input type="number" id="avgField"  class="input" step="0.01" required> 
                       <br>
-                     <input type="submit" value="Submit" id="submit">
+                     <input type="submit" value="Submit" id="submit" onsubmit="return validateForm()">
                     </fieldset>
             </form>
         </section>
